@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Hello World</title>
+	<style type="text/css">
+	#all
+	{	margin:auto;
+		background-color: rgb(33,33,33);
+		background-image:url(http://thelazy.info/wp-content/uploads/2010/12/hello-world-2-600x401.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+ 	}
+	#time
+	{
+		border:1px groove black;
+		margin:20px 0px 0px 770px;
+		width:320px;
+		padding: 20px 20px;
+		box-shadow: 5px 5px 20px rgba(20, 20, 20, 0.8);
+		background-color: transparent;
+		font-family:purisa;
+		font-size:20;
+	}
+	</style>
+</head>
+<body id="all">
+	<div id="time">
+	
+	</div>
+	<script>
+		setInterval(function() {
+			var now = new Date();
+			var sec = now.getSeconds();
+    		var min = now.getMinutes();
+    		var hr =  now.getHours();
+    		var date =  now.getDate();
+    		var month =  now.getMonth();
+    		var monthNames = [ "January", "February", "March", "April", "May", "June", 
+                        "July", "August", "September", "October", "November", "December" ];
+    		document.getElementById("time").innerHTML="Month :" + monthNames[month] + "<br>" + 
+    													"Date : " + date + "<br>" +
+    													"Hour : " + hr + "<br>" +
+    													"Minute : " + min + "<br>" +
+    													"Seconds : " +sec;
+      	},500);
+    </script>
+</body>
+</html>
